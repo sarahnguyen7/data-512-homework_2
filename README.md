@@ -204,6 +204,5 @@ Bashir Bililiqo
 
 ## Special Considerations
 You should be a little careful with the data. Crawling Wikipedia categories to identify relevant page subsets can result in misleading and/or duplicate category labels. Naturally, the data crawl attempted to resolve these, but not all may have been caught. As well, Wikipedia categories are folksonomic, meaning there is very little control over how they are applied to pages. This means that the set of pages is very likely some kind of subset, and may have pages that are not actually about individual politicians. You should look for any data inconsistencies and document how you handle inconsistencies that you find.
-The population_by_country_AUG.2024.csv contains rows that provide cumulative regional population counts. These rows are distinguished by having ALL CAPS values in the 'geography' field (e.g. AFRICA, OCEANIA). These rows should not match the country values in politicians_by_country.AUG.2024.csv, but you will want to retain them so that you can report coverage and quality by region as specified in the analysis section below.
-
+The inconsistencies I found are in the section [Known Issues](#known-issues).
 
