@@ -188,11 +188,15 @@ Access to the ORES API will require that you request an API access key. The samp
 - `score_all_articles` is a function to perform ORES scoring for all articles.
   
 ## Research Implications
+In analyzing article quality and coverage for politicians from Wikipedia, there are some key takeaways about the scope and limits of using it as a data source. I’ve learned that it mostly reflects the interests and efforts of the people contributing to it.
 
+For example, regions like Northern, Southern, Eastern, and Western Europe stand out as having the highest quality coverage (with the Caribbean and Southern Africa also ranking high). However, what really surprised me was the uneven representation in the total number of articles for smaller countries like Antigua and Barbuda, the Federated States of Micronesia, and the Marshall Islands, which are at the top for articles per capita. I expected that bigger countries with more global influence would dominate in terms of presence. The analysis also revealed some biases in the geographic and cultural spread of articles. Countries involved in international tourism or diplomacy tend to get more coverage compared to larger, less globally connected nations. For instance, small countries like Bhutan and Seychelles might get more visibility because of their unique cultural or environmental significance. These patterns likely exist because some contributors are more willing to cover lesser-known topics.
+
+In conclusion, while Wikipedia is a huge source of information, it still mostly reflects the contributors’ interests, and those people aren't spread equally across the world. I was surprised at how few articles there are for countries with geopolitical influence, like Romania or the Philippines, which might be due to regional or language gaps. It also suggests that wealthier, English-speaking countries, or those with active online communities, might be overrepresented. All this points to potential limits of using Wikipedia as a global data source, especially for certain types of research.
 
 **What biases did you expect to find in the data (before you started working with it), and why? 
 **
-Before starting, I expected to find a bias toward content produced in wealthier, English-speaking countries, as this was also what we found in this week's reading in Duarte, N., Llanso, E., & Loup, A. (2018). Mixed Messages? The Limits of Automated Social Media Content Analysis. Proceedings of the 1st Conference on Fairness, Accountability and Transparency, 81, 106.![image](https://github.com/user-attachments/assets/4d2d1e19-88ef-4a81-8275-893101fea24b). In Duarte et al., we find that English-language tools may have disparate accuracy levels for minority populations. I figured that services like Wikipedia were more likely to be geared toward where contributions are more likely to come from regions with greater internet access, higher literacy rates.
+Before starting, I expected to find a bias toward content produced in wealthier, English-speaking countries, as this was also what we found in this week's reading in Duarte, N., Llanso, E., & Loup, A. (2018). Mixed Messages? The Limits of Automated Social Media Content Analysis. Proceedings of the 1st Conference on Fairness, Accountability and Transparency, 81, 106. In Duarte et al., we find that English-language tools may have disparate accuracy levels for minority populations. I figured that services like Wikipedia were more likely to be geared toward where contributions are more likely to come from regions with greater internet access, higher literacy rates.
 
 ** 
 
@@ -206,6 +210,8 @@ A few articles were classified as "Korean" for their country, as they were dated
 Additionally, the following 8 politicians are missing from REST API Call:
 
 Barbara Eibinger-Miedl, Mehrali Gasimov, Kyaw Myint, André Ngongang Ouandji, Tomás Pimentel, Richard Sumah, Segun ''Aeroland'' Adewale, Bashir Bililiqo
+
+As this was to explore bias, it is important to note that no articles from Canada or the US were crawled and therefore, not present in the results.
 
 ## Special Considerations
 You should be a little careful with the data. Crawling Wikipedia categories to identify relevant page subsets can result in misleading and/or duplicate category labels. Naturally, the data crawl attempted to resolve these, but not all may have been caught. As well, Wikipedia categories are folksonomic, meaning there is very little control over how they are applied to pages. This means that the set of pages is very likely some kind of subset, and may have pages that are not actually about individual politicians. You should look for any data inconsistencies and document how you handle inconsistencies that you find.
