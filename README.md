@@ -182,7 +182,11 @@ Ensure you have an API Access key in order to use the ORES API. Directions on ho
 Access to the ORES API will require that you request an API access key. The sample code for making ORES requests includes links to information about how to request a key. A "best practice" for any code that requires an API key is to make sure that the key does not appear in the plain text of the code or notebook. In the notebook, I have discussed how to request the key.
 
 ## Functions
-
+- `request_pageviews_per_article` (created by Dr. McDonald) is an API request made using one function to make the code resuable. It has paramters but relies on constants listed in the Notebook.
+- `batch_request_pageinfo` calls the API to get the page information for multiple pages at the same time, by separating the page titles with the vertical bar "|" character. However, this approach has limits. You should probably check the API documentation if you want to do multiple pages in a single request - and limit the number of pages in one request reasonably. At the time of writing, the limit is 50 pages in a single request.
+- `filter_pageinfo` filters the page information we just got into `title:lastrevid`
+- `request_ores_score_per_article` (created by Dr. McDonald) is an ORES API whose main parameter is `article_revid`.
+- `score_all_articles` is a function to perform ORES scoring for all articles.
 ## Research Implications
 
 
