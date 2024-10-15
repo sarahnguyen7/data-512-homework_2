@@ -146,9 +146,9 @@ Output Files:
 ##### 6.  `wp_countries-no_match.txt`
 **Description**: Contains countries that there are no matches for after merging the wikipedia data and population data.
 
-Country Name 1,
+Country Name 1
 
-Country Name 2,
+Country Name 2
 
 Country Name 3
 
@@ -186,7 +186,7 @@ Access to the ORES API will require that you request an API access key. The samp
 ## Research Implications
 
 ## Known Issues
-A few articles were classified as "Korean" for their country, as they were dated before North and South Korea split. These articles went to neither country. "Korean" can be found in `wp_countries-no_match.txt`. In the merge to create `wp_countries-no_match.txt`, I originally found that some countries were spelled differently in the input `.csv` files. They were renamed as the following with Politicans by country on the right to :
+A few articles were classified as "Korean" for their country, as they were dated before North and South Korea split. These articles went to neither country. "Korean" can be found in `wp_countries-no_match.txt`. In the merge to create `wp_countries-no_match.txt`, I originally found that some countries were spelled differently in the input `.csv` files. They were renamed as the following with `politicians_by_country_AUG.2024.csv`'s format on the right to `politicians_by_country_AUG.2024.csv` on the left:
 
     'Guinea-Bissau': 'GuineaBissau',  
     'Korea, South': 'Korea (South)',  
