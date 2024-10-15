@@ -31,8 +31,8 @@ The code written was developed in combination of myself, ChatGPT, Dr. David. W. 
 #### Wikipedia API Example Code
 The source data is governed by the [Wikimedia Foundation terms of use](https://foundation.wikimedia.org/wiki/Terms_of_use). The datasets created from this project is subject to the same terms, allowing for reuse and redistribution with appropriate attribution.
 
-#### Liftwing ML Service API
-Wikimedia Foundation (WMF) is implementing a new Machine Learning (ML) service infrastructure that they call [LiftWing](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing). This example illustrates how to generate article quality estimates for article revisions using the LiftWing version of [ORES](https://www.mediawiki.org/wiki/ORES). The [ORES API documentation](https://ores.wikimedia.org) can be accessed from the main ORES page. The [ORES LiftWing documentation](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/Usage) and [Terms of Use](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/Usage) can be found in the hyperlinks.
+#### Liftwing ML Service API Example Code
+The Liftwing ML service provides a flexible and scalable API for deploying machine learning models in production. All use of the service is governed by the [Liftwing API terms of use]((https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/Usage)). Any datasets generated or used by this service are subject to these terms, which allow for reuse and redistribution with proper attribution, where applicable. 
 
 #### Dr. David W. McDonald's Example Code
 This code example was developed by Dr. David W. McDonald for use in DATA 512, a course in the UW MS Data Science degree program. This code is provided under the [Creative Commons](https://creativecommons.org) [CC-BY license](https://creativecommons.org/licenses/by/4.0/). Revision 1.3 - August 16, 2024
@@ -47,6 +47,9 @@ Portions of this project were assisted by GPT-4, an AI model by OpenAI.  These a
 
 For more details about the Wikimedia API used in this project, please refer to the following resources:
 - [Wikimedia REST API](https://wikimedia.org/api/rest_v1/)
+
+#### Liftwing ML Service API
+Wikimedia Foundation (WMF) is implementing a new Machine Learning (ML) service infrastructure that they call [LiftWing](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing). This notebook illustrates how to generate article quality estimates for article revisions using the LiftWing version of [ORES](https://www.mediawiki.org/wiki/ORES). The [ORES API documentation](https://ores.wikimedia.org) can be accessed from the main ORES page. The [ORES LiftWing documentation](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/Usage).
 
 ## Data Files
 #### Input Files:
