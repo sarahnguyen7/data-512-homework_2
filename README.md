@@ -15,11 +15,11 @@ A ranking of geographic regions by articles-per-person and proportion of high qu
 - [API Documentation](#api-documentation)
 - [Data Files](#data-files)
 - [Data Schema](#data-schema)
-- [Known Issues](#known-issues)
-- [Special Considerations](#special-considerations)
 - [Instructions for Use](#instructions-for-use)
 - [Functions](#functions)
 - [Research Implications](#research-implications)
+- [Known Issues](#known-issues)
+- [Special Considerations](#special-considerations)
 
 ## Source Data
 The Wikipedia [Category:Politicians by nationality](https://en.wikipedia.org/wiki/Category:Politicians_by_nationality) was crawled to generate a list of Wikipedia article pages about politicians from a wide range of countries. This data is in the repository as `politicians_by_country.AUG.2024.csv`.
@@ -162,14 +162,6 @@ Country Name 3
 | article_quality | String    | The ORES predicted article quality class (e.g., `FA`, `GA`, etc.). |
 
 
-
-## Known Issues
-A few articles were classified as "Korean" for their country, as they were dated before North and South Korea split. These articles went to neither country. "Korean" can be found in `wp_countries-no_match.txt`.
-
-## Special Considerations
-You should be a little careful with the data. Crawling Wikipedia categories to identify relevant page subsets can result in misleading and/or duplicate category labels. Naturally, the data crawl attempted to resolve these, but not all may have been caught. As well, Wikipedia categories are folksonomic, meaning there is very little control over how they are applied to pages. This means that the set of pages is very likely some kind of subset, and may have pages that are not actually about individual politicians. You should look for any data inconsistencies and document how you handle inconsistencies that you find.
-The population_by_country_AUG.2024.csv contains rows that provide cumulative regional population counts. These rows are distinguished by having ALL CAPS values in the 'geography' field (e.g. AFRICA, OCEANIA). These rows should not match the country values in politicians_by_country.AUG.2024.csv, but you will want to retain them so that you can report coverage and quality by region as specified in the analysis section below.
-
 ## Instructions for Use
 ### Installation
 Ensure you have Python 3.8 and above to install the required packages:
@@ -188,5 +180,22 @@ Access to the ORES API will require that you request an API access key. The samp
 - `request_ores_score_per_article` (created by Dr. McDonald) is an ORES API whose main parameter is `article_revid`.
 - `score_all_articles` is a function to perform ORES scoring for all articles.
 ## Research Implications
+
+## Known Issues
+A few articles were classified as "Korean" for their country, as they were dated before North and South Korea split. These articles went to neither country. "Korean" can be found in `wp_countries-no_match.txt`.
+
+Additionally, the following 8 politicians are missing from REST API Call:
+Barbara Eibinger-Miedl
+Mehrali Gasimov
+Kyaw Myint
+André Ngongang Ouandji
+Tomás Pimentel
+Richard Sumah
+Segun ''Aeroland'' Adewale
+Bashir Bililiqo
+
+## Special Considerations
+You should be a little careful with the data. Crawling Wikipedia categories to identify relevant page subsets can result in misleading and/or duplicate category labels. Naturally, the data crawl attempted to resolve these, but not all may have been caught. As well, Wikipedia categories are folksonomic, meaning there is very little control over how they are applied to pages. This means that the set of pages is very likely some kind of subset, and may have pages that are not actually about individual politicians. You should look for any data inconsistencies and document how you handle inconsistencies that you find.
+The population_by_country_AUG.2024.csv contains rows that provide cumulative regional population counts. These rows are distinguished by having ALL CAPS values in the 'geography' field (e.g. AFRICA, OCEANIA). These rows should not match the country values in politicians_by_country.AUG.2024.csv, but you will want to retain them so that you can report coverage and quality by region as specified in the analysis section below.
 
 
