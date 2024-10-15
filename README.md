@@ -49,7 +49,7 @@ For more details about the Wikimedia API used in this project, please refer to t
 - [Wikimedia REST API](https://wikimedia.org/api/rest_v1/)
 
 #### Liftwing ML Service API
-Wikimedia Foundation (WMF) is implementing a new Machine Learning (ML) service infrastructure that they call [LiftWing](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing). This notebook illustrates how to generate article quality estimates for article revisions using the LiftWing version of [ORES](https://www.mediawiki.org/wiki/ORES). The [ORES API documentation](https://ores.wikimedia.org) can be accessed from the main ORES page. The [ORES LiftWing documentation](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/Usage).
+- Wikimedia Foundation (WMF) is implementing a new Machine Learning (ML) service infrastructure that they call [LiftWing](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing). This notebook illustrates how to generate article quality estimates for article revisions using the LiftWing version of [ORES](https://www.mediawiki.org/wiki/ORES). The [ORES API documentation](https://ores.wikimedia.org) can be accessed from the main ORES page. The [ORES LiftWing documentation](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/Usage).
 
 ## Data Files
 #### Input Files:
@@ -66,9 +66,9 @@ Output Files:
 - `wp_politicians_by_country.csv`
 
 ## Data Schema
-#### Input Files:
+### Input Files:
 ##### 1. `population_by_country_AUG.2024.csv`
-  **Description**: Contains population data for countries and regions, with regions distinguished by ALL CAPS values in the `Geography` column. These regional rows should not be matched with the country values in `politicians_by_country_AUG.2024.csv`, but they are essential for regional reporting.
+ **Description**: Contains population data for countries and regions, with regions distinguished by ALL CAPS values in the `Geography` column. These regional rows should not be matched with the country values in `politicians_by_country_AUG.2024.csv`, but they are essential for regional reporting.
 
 | Column     | Data Type | Description                                                                           |
 |------------|-----------|---------------------------------------------------------------------------------------|
@@ -77,7 +77,7 @@ Output Files:
 
 
 ##### 2. `politicians_by_country_AUG.2024.csv`
-**Description**: Contains a list of politicians categorized by their respective countries.
+##### **Description**: Contains a list of politicians categorized by their respective countries.
 
 | Column   | Data Type |
 |----------|-----------|
@@ -86,7 +86,7 @@ Output Files:
 | country  | String    |
 ---
 
-#### Intermediary Files:
+### Intermediary Files:
 ##### 3. `ores_scores.json`
 **Description**: Stores the ORES (Objective Revision Evaluation Service) quality scores for politicians' Wikipedia articles, along with their revision IDs.
 
@@ -145,7 +145,7 @@ Output Files:
 
 ---
 
-#### Output Files:
+### Output Files:
 ##### 6.  `wp_countries-no_match.txt`
 **Description**: Contains countries that there are no matches for after merging the wikipedia data and population data.
 
@@ -196,14 +196,8 @@ A few articles were classified as "Korean" for their country, as they were dated
     'Korea, North': 'Korea (North)'   
 
 Additionally, the following 8 politicians are missing from REST API Call:
-Barbara Eibinger-Miedl
-Mehrali Gasimov
-Kyaw Myint
-André Ngongang Ouandji
-Tomás Pimentel
-Richard Sumah
-Segun ''Aeroland'' Adewale
-Bashir Bililiqo
+
+Barbara Eibinger-Miedl, Mehrali Gasimov, Kyaw Myint, André Ngongang Ouandji, Tomás Pimentel, Richard Sumah, Segun ''Aeroland'' Adewale, Bashir Bililiqo
 
 ## Special Considerations
 You should be a little careful with the data. Crawling Wikipedia categories to identify relevant page subsets can result in misleading and/or duplicate category labels. Naturally, the data crawl attempted to resolve these, but not all may have been caught. As well, Wikipedia categories are folksonomic, meaning there is very little control over how they are applied to pages. This means that the set of pages is very likely some kind of subset, and may have pages that are not actually about individual politicians. You should look for any data inconsistencies and document how you handle inconsistencies that you find.
