@@ -186,7 +186,15 @@ Access to the ORES API will require that you request an API access key. The samp
 - `filter_pageinfo` filters the page information we just got into `title:lastrevid`
 - `request_ores_score_per_article` (created by Dr. McDonald) is an ORES API whose main parameter is `article_revid`.
 - `score_all_articles` is a function to perform ORES scoring for all articles.
+  
 ## Research Implications
+
+
+**What biases did you expect to find in the data (before you started working with it), and why? 
+**
+Before starting, I expected to find a bias toward content produced in wealthier, English-speaking countries, as this was also what we found in this week's reading in Duarte, N., Llanso, E., & Loup, A. (2018). Mixed Messages? The Limits of Automated Social Media Content Analysis. Proceedings of the 1st Conference on Fairness, Accountability and Transparency, 81, 106.![image](https://github.com/user-attachments/assets/4d2d1e19-88ef-4a81-8275-893101fea24b). In Duarte et al., we find that English-language tools may have disparate accuracy levels for minority populations. I figured that services like Wikipedia were more likely to be geared toward where contributions are more likely to come from regions with greater internet access, higher literacy rates.
+
+** 
 
 ## Known Issues
 A few articles were classified as "Korean" for their country, as they were dated before North and South Korea split. These articles went to neither country. "Korean" can be found in `wp_countries-no_match.txt`. In the merge to create `wp_countries-no_match.txt`, I originally found that some countries were spelled differently in the input `.csv` files. They were renamed as the following with `politicians_by_country_AUG.2024.csv`'s format on the right to `politicians_by_country_AUG.2024.csv` on the left:
