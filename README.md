@@ -76,11 +76,11 @@ Output Files:
 ##### 2. `politicians_by_country_AUG.2024.csv`
 **Description**: Contains a list of politicians categorized by their respective countries.
 
-| Column   | Data Type | Description                                 |
-|----------|-----------|---------------------------------------------|
-| name     | String    | Full name of the politician.                |
-| url      | String    | Wikipedia URL for the politician's article. |
-| country  | String    | Country name where the politician is based. |
+| Column   | Data Type |
+|----------|-----------|
+| name     | String    |
+| url      | String    |
+| country  | String    |
 ---
 
 #### Intermediary Files:
@@ -130,15 +130,15 @@ Output Files:
 ##### 5. `article_quality_per_capita.csv`
 **Description**: A CSV file containing the number of articles and high-quality articles per capita for each country and region. The population values are stored in individuals (converted from millions).
 
-| Column                          | Data Type | Description                                                                 |
-|----------------------------------|-----------|-----------------------------------------------------------------------------|
-| country                         | String    | The name of the country.                                                    |
-| region                          | String    | The region associated with the country.                                     |
-| total_articles                  | Integer   | Total number of articles for the country.                                   |
-| high_quality_articles           | Integer   | Number of high-quality articles (FA/GA) for the country.                    |
-| population                      | Float     | Population of the country (in individuals, after converting from millions). |
-| articles_per_capita             | Float     | Total articles per capita, calculated as `total_articles / population`.     |
-| high_quality_articles_per_capita | Float     | High-quality articles per capita, calculated as `high_quality_articles / population`. |
+| Column                          | Data Type |                                                                  
+|----------------------------------|-----------|
+| country                         | String    | 
+| region                          | String    | 
+| total_articles                  | Integer   | 
+| high_quality_articles           | Integer   | 
+| population                      | Float     | 
+| articles_per_capita             | Float     |
+| high_quality_articles_per_capita | Float     |
 
 ---
 
@@ -150,16 +150,16 @@ Country Name 2,
 Country Name 3
 
 ##### 7. `wp_politicians_by_country.csv`
-**Description**: A CSV file containing the list of politicians, their countries, ORES quality scores, and population information (from the merged datasets).
+**Description**: A CSV file containing the list of politicians, their countries, ORES quality scores, and population information (from the merged datasets). The population is also in millions here.
 
-| Column          | Data Type | Description                                                     |
-|-----------------|-----------|-----------------------------------------------------------------|
-| country         | String    | The country where the politician is based.                      |
-| region          | String    | The region associated with the country.                         |
-| population      | Float     | Population of the country (in millions).                        |
-| article_title   | String    | The article title or the name of the politician.                |
-| revision_id     | Integer   | The latest revision ID of the politician's article.             |
-| article_quality | String    | The ORES predicted article quality class (e.g., `FA`, `GA`, etc.). |
+| Column          | Data Type |
+|-----------------|-----------|
+| country         | String    |
+| region          | String    |
+| population      | Float     |
+| article_title   | String    |
+| revision_id     | Integer   |
+| article_quality | String    |
 
 
 ## Instructions for Use
